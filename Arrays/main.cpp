@@ -3,10 +3,10 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-//#define CLASSWORK
+#define CLASSWORK
 //#define DEFAULT_COUT
 //#define REVERSE_COUT
-#define ARITHMETIC_MEAN_OF_ELEMENTS 
+//#define ARITHMETIC_MEAN_OF_ELEMENTS 
 //#define MIN_MAX_OF_ELEMENTS
 void main()
 {
@@ -16,21 +16,25 @@ void main()
 	int arr[n] = { 3, 5, 8 };
 	arr[1] = 1024;			//обращаемся к элементу массива на запись
 	cout << arr[1] << endl;	//обращаемся к элементу на чтение
-
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % (100 - 50) + 50;
+	}
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
 	}
 	cout << endl;
 #endif //CLASSWORK
-	setlocale(LC_ALL, "Russian");
+
+	/*setlocale(LC_ALL, "Russian");
 	const int n = 5;
 	cout << "Введите значения массива: " << endl;
 	int array[n];
 	for (int i = 0; i < n; i++)
 	{
 		cout << i+1 << ": "; cin >> array[i];
-	}
+	}*/
 #ifdef DEFAULT_COUT
 	cout << "Прямой вывод массива: " << endl;
 	cout << "[";
