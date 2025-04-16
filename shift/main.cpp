@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 const int n = 10;
@@ -7,7 +7,7 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	int array[n] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	int shift;
-	cout << "Ââåäèòå ÷èñëî, íà êîòîðîå ñäâèãàåì ìàññèâ: "; cin >> shift;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾, Ð½Ð° ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ ÑÐ´Ð²Ð¸Ð³Ð°ÐµÐ¼ Ð¼Ð°ÑÑÐ¸Ð²: "; cin >> shift;
 	int temp[9] = { 0 };
 	shift %= n;
 	for (int i = 0; i < shift; i++)
