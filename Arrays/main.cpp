@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -14,8 +14,8 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	const int n = 5;
 	int arr[n] = { 3, 5, 8 };
-	arr[1] = 1024;			//обращаемся к элементу массива на запись
-	cout << arr[1] << endl;	//обращаемся к элементу на чтение
+	arr[1] = 1024;			//РѕР±СЂР°С‰Р°РµРјСЃСЏ Рє СЌР»РµРјРµРЅС‚Сѓ РјР°СЃСЃРёРІР° РЅР° Р·Р°РїРёСЃСЊ
+	cout << arr[1] << endl;	//РѕР±СЂР°С‰Р°РµРјСЃСЏ Рє СЌР»РµРјРµРЅС‚Сѓ РЅР° С‡С‚РµРЅРёРµ
 
 	for (int i = 0; i < n; i++)
 	{
@@ -25,14 +25,14 @@ void main()
 #endif //CLASSWORK
 	setlocale(LC_ALL, "Russian");
 	const int n = 5;
-	cout << "Введите значения массива: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РјР°СЃСЃРёРІР°: " << endl;
 	int array[n];
 	for (int i = 0; i < n; i++)
 	{
 		cout << i+1 << ": "; cin >> array[i];
 	}
 #ifdef DEFAULT_COUT
-	cout << "Прямой вывод массива: " << endl;
+	cout << "РџСЂСЏРјРѕР№ РІС‹РІРѕРґ РјР°СЃСЃРёРІР°: " << endl;
 	cout << "[";
 	for (int i = 0; i < n; i++)
 	{
@@ -42,7 +42,7 @@ void main()
 	cout << "]" << endl;
 #endif // DEFAULT_COUT
 #ifdef REVERSE_COUT
-	cout << "Обратный вывод массива: " << endl;
+	cout << "РћР±СЂР°С‚РЅС‹Р№ РІС‹РІРѕРґ РјР°СЃСЃРёРІР°: " << endl;
 	cout << "[";
 	for (int i = n - 1; i >= 0; i--)
 	{
@@ -57,7 +57,7 @@ void main()
 	{
 		summ += array[i];
 	}
-	cout << "Среднее арифметическое элементов массива: " << summ / n;
+	cout << "РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°: " << summ / n;
 #endif // ARITHMETIC_MEAN_OF_ELEMENTS
 #ifdef MIN_MAX_OF_ELEMENTS
 	int min_element = array[0], max_element = array[0];
@@ -66,8 +66,8 @@ void main()
 		array[i] < min_element ? min_element = array[i] : min_element = min_element;
 		array[i] > max_element ? max_element = array[i] : max_element = max_element;
 	}
-	cout << "Минимальный элемент массива: " << min_element << endl;
-	cout << "Максимальный элемент массива: " << max_element << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°: " << min_element << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°: " << max_element << endl;
 #endif // MIN_MAX_OF_ELEMENTS
 
 }
