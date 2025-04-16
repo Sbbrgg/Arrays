@@ -27,6 +27,6 @@ void main()
 	{
 		cout << array[i];
 		cout << (i == (n - 1) ? "": " ");
-	}
+ 	}
 	cout << "]";
 }

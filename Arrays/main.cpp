@@ -6,7 +6,7 @@ using std::endl;
 //#define CLASSWORK
 //#define DEFAULT_COUT
 //#define REVERSE_COUT
-//#define ARITHMETIC_MEAN_OF_ELEMENTS 
+#define ARITHMETIC_MEAN_OF_ELEMENTS 
 //#define MIN_MAX_OF_ELEMENTS
 void main()
 {
@@ -57,7 +57,7 @@ void main()
 	{
 		summ += array[i];
 	}
-	cout << "Среднее арифметическое элементов массива: " << summ / n;
+	cout << "Среднее арифметическое элементов массива: " << (double)summ / n;
 #endif // ARITHMETIC_MEAN_OF_ELEMENTS
 #ifdef MIN_MAX_OF_ELEMENTS
 	int min_element = array[0], max_element = array[0];
