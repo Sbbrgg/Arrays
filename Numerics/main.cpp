@@ -1,12 +1,12 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 void main()
 {
 	setlocale(LC_ALL, "Russian");
 	int number;
-	cout << "Ââåäèòå äåñÿòè÷íîå ÷èñëî: "; cin >> number; cout << endl;
-	cout << "Äâîè÷íîå ïðåäñòàâëåíèå ÷èñëà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÑÑÑ‚Ð¸Ñ‡Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾: "; cin >> number; cout << endl;
+	cout << "Ð”Ð²Ð¾Ð¸Ñ‡Ð½Ð¾Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ñ‡Ð¸ÑÐ»Ð°: ";
 	if (number == 0) cout << 0;
 	else
 	{
@@ -21,7 +21,7 @@ void main()
 		}
 		for (int j = i - 1; j >= 0; j--)cout << array_of_binary[j];
 	}
-	cout << endl << "Øåñòíàäöàòèðè÷íîå ïðåäñòàâëåíèå ÷èñëà: ";
+	cout << endl << "Ð¨ÐµÑÑ‚Ð½Ð°Ð´Ñ†Ð°Ñ‚Ð¸Ñ€Ð¸Ñ‡Ð½Ð¾Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ñ‡Ð¸ÑÐ»Ð°: ";
 	if (number == 0) cout << 0;
 	else 
 	{
