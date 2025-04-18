@@ -4,14 +4,14 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-//#define CLASSWORK
+//#define HOMEWORK
 #define tab "\t"
 
 const int n = 10;
 void main()
 {
 	setlocale(LC_ALL, "Russian");
-#ifdef CLASSWORK
+#ifdef HOMEWORK
 	int array[n] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	int shift;
 	cout << "Введите число, на которое сдвигаем массив: "; cin >> shift;
@@ -36,7 +36,7 @@ void main()
 		cout << (i == (n - 1) ? "" : " ");
 	}
 	cout << "]";
-#endif // CLASSWORK
+#endif // HOMEWORK
 	const int n = 10;
 	int arr[n] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	//Вывод исходного массива
