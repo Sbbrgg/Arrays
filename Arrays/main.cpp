@@ -4,37 +4,85 @@ using std::cin;
 using std::endl;
 
 #define CLASSWORK
+#define CHOICE_SORT
 //#define DEFAULT_COUT
 //#define REVERSE_COUT
 //#define ARITHMETIC_MEAN_OF_ELEMENTS 
 //#define MIN_MAX_OF_ELEMENTS
+//#define CLICHE
+
 void main()
 {
 #ifdef CLASSWORK
 	setlocale(LC_ALL, "Russian");
-	const int n = 5;
+
+	const int n = 50;
 	int arr[n] = { 3, 5, 8 };
 	arr[1] = 1024;			//обращаемся к элементу массива на запись
-	cout << arr[1] << endl;	//обращаемся к элементу на чтение
+	//cout << arr[1] << endl;	//обращаемся к элементу на чтение
+	
+
+	int minRand, maxRand;
+	//Обработка неправильного ввода
+	do
+	{
+		cout << "Введите минимальное случайное число: "; cin >> minRand;
+		cout << "Введите максимальное случайное число: "; cin >> maxRand;
+		if (minRand > maxRand)cout << "Минимальное должно быть меньше максимального" << endl;
+		if (minRand == maxRand) cout << "Числа должны быть разные" << endl;
+	} while (minRand >= maxRand);
+
+
+	//Меняем местами, если введённые числа не соответствуют
+	/*if (maxRand < minRand)
+	{
+		int buffer = minRand;
+		minRand = maxRand;
+		maxRand = minRand;
+	}*/
+
+	//Заполнение массива псевдослучайными числами
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % (100 - 50) + 50;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
+
+	//Вывод массива, заполненого псевдослучайными числами
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
 	}
 	cout << endl;
+
+#ifdef CHOICE_SORT
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+		cout << arr[i] << " ";
+	}
+#endif // CHOICE_SORT
+
 #endif //CLASSWORK
 
-	/*setlocale(LC_ALL, "Russian");
+	//Заготовка для следующих задач
+#ifdef CLICHE
+	setlocale(LC_ALL, "Russian");
 	const int n = 5;
 	cout << "Введите значения массива: " << endl;
 	int array[n];
 	for (int i = 0; i < n; i++)
 	{
-		cout << i+1 << ": "; cin >> array[i];
-	}*/
+		cout << i + 1 << ": "; cin >> array[i];
+	}
+#endif // CLICHE
 #ifdef DEFAULT_COUT
 	cout << "Прямой вывод массива: " << endl;
 	cout << "[";
