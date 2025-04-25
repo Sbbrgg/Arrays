@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 void main()
@@ -6,7 +6,7 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	const int n = 10;
 	int array[n] = { 0 }, minRand = 70, maxRand = 80, value = 0;
-	for (int i = 0; i < n; )
+	for (int i = 0; i < n; i++)
 	{
 		value = rand() % (maxRand - minRand) + minRand;
 		bool check = true;	
@@ -15,13 +15,13 @@ void main()
 			if (value == array[j])
 			{
 				check = false;
+				i--;
 				break;
 			}
 		}
 		if (check) 
 		{
 			array[i] = value;
-			i++;
 		}
 	}
 	for (int i = 0; i < n; i++)
