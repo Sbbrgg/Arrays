@@ -32,14 +32,20 @@ void main()
 		{
 			int remainder = 0;
 			remainder = temp % 16;
-			if (remainder < 10)
+			if (remainder == 10) array_of_binary[i] = 'A';
+			if (remainder == 11) array_of_binary[i] = 'B';
+			if (remainder == 12) array_of_binary[i] = 'C';
+			if (remainder == 13) array_of_binary[i] = 'D';
+			if (remainder == 14) array_of_binary[i] = 'E';
+			if (remainder == 15) array_of_binary[i] = 'F';
+			/*if (remainder < 10)
 			{
 				array_of_binary[i] = '0' + remainder;
 			}
 			else 
 			{
 				array_of_binary[i] = 'A' + (remainder - 10);
-			}
+			}*/
 			temp /= 16;
 			i++;
 		}
