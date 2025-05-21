@@ -2,7 +2,7 @@
 using namespace std;
 
 //#define CLASSWORK
-#define HOMEWORK
+//#define HOMEWORK
 
 void main()
 {
@@ -56,6 +56,5 @@ void main()
 	cout << "Минимальный элемент массива: " << minElement << endl << "Максимальный элемент массива: " << maxElement << endl;
 
 #endif // HOMEWORK
-
-
+	
 }

@@ -1,9 +1,15 @@
 ﻿#include <iostream>
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
+#define tab "\t"
+
+//#define HOMEWORK
 
 void main()
 {
 	setlocale(LC_ALL, "Russian");
+#ifdef HOMEWORK
 	const int n = 10;
 	int arr[n], minRand = 0, maxRand = 5;
 	for (int i = 0; i < n; i++) arr[i] = rand() % (maxRand - minRand) + minRand;
@@ -30,8 +36,32 @@ void main()
 					count++;
 				}
 			}
-			if(count > 1) cout << "Число: " << arr[i] << " повторяется " << count << endl;
+			if (count > 1) cout << "Число: " << arr[i] << " повторяется " << count << endl;
 		}
 	}
 	cout << endl << endl;
+#endif // HOMEWORK
+	const int n = 10;
+	int arr[n];
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << tab;
+	}
+	cout << endl;
+	//поиск повторений
+	for (int i = 0; i < n; i++)
+	{
+		int count = 0;
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[i] == arr[j])
+				count++;
+		}
+		if (count > 0) cout << "Значение " << arr[i] << " встречается " << count << " раз" << endl;
+
+	}
 }
